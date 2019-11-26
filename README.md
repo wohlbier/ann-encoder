@@ -5,8 +5,8 @@
 conda create -n annenc_env python=3.6 pip -y
 source activate annenc_env
 
-conda install pytorch==0.4.1 -c pytorch -y
-conda install faiss-gpu -c pytorch -y
+conda install pytorch-cpu==0.4.1 -c pytorch -y
+conda install faiss-cpu -c pytorch -y
 pip install -r requirements.txt
 ```
 
@@ -18,6 +18,6 @@ pip install -r requirements.txt
 
 #### Todo + Questions
 
-- Can we avoid doing some of the synchronizes? 
+- Can we avoid doing some of the synchronizes?
 - IP search may be slower than L2? Is that true?
-- [BUG] Changing the batch size in `inference.py` changes the precision slightly. 
+- [BUG] Changing the batch size in `inference.py` changes the precision slightly.
